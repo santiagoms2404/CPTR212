@@ -1,7 +1,7 @@
 /*
 Programmer : Santiago Marin Suarez
 *Course : CPTR 212
-*Description : Class car, 4th program
+*Description : Class car, 4th program (inheritance)
 * Date : September 20, 2021
 *Last update : September 28, 2021
 */
@@ -15,6 +15,67 @@ class Car
 {
     public:
 
+        // Constructor functions
+        Car(string Make, string Model, float FuelCapacity, float DistanceTravelled);
+            // Trade in car.
+
+        Car(string Make, string Model, float FuelCapacity);
+            // New car shipped from the manufacturer; assuming distance travelles is 0.
+
+        Car(); // Defult constructor
+
+        // Mutator functions
+        void set(string Make, string Model, float FuelCapacity, float DistanceTravelled)
+
+        // Search: If we have only one set fnction, we want to change only one parameter
+        // can we use one set of function to change one parameter wile keeping other parameters same.
+
+        // Accessor functions
+        string getModel(); // get the model of the car.
+        int getMake(); // get the year of the car.
+        float getFuelCapacity(); // get the fuel capacity.
+        float getDistanceTravelled(); // get distance travelled
+
+        float fuelEconomy(float cFuelCapacity, float cDistanceTravelled);
+        void input();
+        void output();
+
+    private:
+        // member variables
+        float distanceTravelled;
+        float fuelCapacity;
+        int makeOfTheCar;
+        string carModel;
+
+};
+
+class Smart : public Car { // Smart car inheritance from base class car
+
+    public:
+        void navigation(float source, float destination, bool highways, bool tolls, bool ferries)
+
+        // Constructors
+        // Accessor 
+        // Mutator
+
+    private:
+        float source;
+
+
+};
+
+void Smart::navigation(add parameters)
+
+    // v = 40 (general city speed limit)
+    // distance = destination - source
+    // print 1) time 2) distance
+    // time = v * s
+
+
+
+       
+
+        
         Car(float distance, float capacity);
         // Initialize the distance travelled to miles and
         // initialize the fuel capacity to galons.
@@ -60,7 +121,7 @@ class Car
         float distanceTravelled;
         float fuelCapacity;
         int makeOfTheCar;
-        string carModel;
+        string carModel();
 
 };
 
